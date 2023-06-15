@@ -5,6 +5,7 @@ import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class Piece {
@@ -22,7 +23,7 @@ public class Piece {
         return pieceAlliance;
     }
 
-    public List<Move> calculateLegalMoves(Board board) {
+    public Collection<Move> calculateLegalMoves(Board board) {
         List<Move> availableMoves = new ArrayList<>();
 
         return availableMoves;
