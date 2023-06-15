@@ -4,11 +4,12 @@ import com.chess.engine.Alliance;
 import com.chess.engine.board.Board;
 import com.chess.engine.board.Move;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Piece {
 
-    private final int piecePosition;
+    final int piecePosition;
 
     private final Alliance pieceAlliance;
 
@@ -17,7 +18,13 @@ public class Piece {
         this.pieceAlliance = pieceAlliance;
     }
 
+    public Alliance getPieceAlliance() {
+        return pieceAlliance;
+    }
+
     public List<Move> calculateLegalMoves(Board board) {
-        
+        List<Move> availableMoves = new ArrayList<>();
+
+        return availableMoves;
     }
 }
