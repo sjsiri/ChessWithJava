@@ -29,8 +29,6 @@ public class Knight extends Piece {
             candidateDestinationCoordinate = this.piecePosition + currentCandidateOffset;
 
             if(BoardUtils.isValidTileCoordinate(candidateDestinationCoordinate)) {
-                Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
-
                 if (isFirstColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                     isSecondColumnExclusion(this.piecePosition, currentCandidateOffset) ||
                     isSeventhColumnExclusion(this.piecePosition, currentCandidateOffset) ||
@@ -38,6 +36,8 @@ public class Knight extends Piece {
 
                     continue;
                 }
+                Tile candidateDestinationTile = board.getTile(candidateDestinationCoordinate);
+
                 if (!candidateDestinationTile.isTileOccupied()) {
                   legalMoves.add(new Move.MajorMove(board, this, candidateDestinationCoordinate));
                 } else {
