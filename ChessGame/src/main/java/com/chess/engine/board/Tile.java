@@ -16,7 +16,7 @@ public abstract class Tile {
         //Create a map to hold all tiles in a chess board
         Map<Integer, EmptyTile> emptyTileMap = new HashMap<>();
         //Go through the board and put all the empty tiles in the hashmap
-        for (int i = 0; i < 64; i++) {
+        for (int i = 0; i < BoardUtils.NUM_TILES; i++) {
             emptyTileMap.put(i, new EmptyTile(i));
         }
 
